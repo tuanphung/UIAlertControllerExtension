@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  UIAlertControllerExtension: b910a7bb7c35d1f66b8394c3ea9ca313fb793c6c
+  UIAlertControllerExtension: 10f7e7fddb7d3065360e77a6f7f2f7623a4db571
 
 COCOAPODS: 0.37.2
