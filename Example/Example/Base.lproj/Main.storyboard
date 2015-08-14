@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7IS-w5-86a">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Item-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="x5j-Ap-lJB">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="t8O-Hr-J3K" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="boE-D6-brh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zgx-ht-ayc"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="HoM-vn-vcl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiH-yq-utY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chH-Op-xkb">
                                 <rect key="frame" x="36" y="70" width="528" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Of5-BZ-9uR"/>
+                                    <constraint firstAttribute="height" constant="50" id="mGI-5p-YGk"/>
                                 </constraints>
                                 <state key="normal" title="Show Default Alert">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,13 +31,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="showDefaultAlert:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2yD-ZP-kiW"/>
+                                    <action selector="showDefaultAlert:" destination="t8O-Hr-J3K" eventType="touchUpInside" id="gMs-Lj-Dfs"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3r4-Aa-3t0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="00X-E0-GtO">
                                 <rect key="frame" x="36" y="130" width="528" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="hog-CK-KQg"/>
+                                    <constraint firstAttribute="height" constant="50" id="fXJ-VD-HrD"/>
                                 </constraints>
                                 <state key="normal" title="Show Attributed Alert">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,13 +48,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="showAttributedAlert:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fw0-9M-8nA"/>
+                                    <action selector="showAttributedAlert:" destination="t8O-Hr-J3K" eventType="touchUpInside" id="i51-fC-G0G"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-OU-L2l">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bfw-by-NVY">
                                 <rect key="frame" x="36" y="200" width="528" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="uDc-IY-oXT"/>
+                                    <constraint firstAttribute="height" constant="50" id="NBu-7u-Wgh"/>
                                 </constraints>
                                 <state key="normal" title="Show Default ActionSheet">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,13 +65,13 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="showDefaultActionSheet:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QhT-jJ-vAp"/>
+                                    <action selector="showDefaultActionSheet:" destination="t8O-Hr-J3K" eventType="touchUpInside" id="bnp-Uy-ueX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eL-eu-gLe">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRj-Yt-sLc">
                                 <rect key="frame" x="36" y="260" width="528" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="9M9-Lg-P06"/>
+                                    <constraint firstAttribute="height" constant="50" id="E01-B3-J82"/>
                                 </constraints>
                                 <state key="normal" title="Show Attributed ActionSheet">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -82,32 +82,67 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="showAttributedActionSheet:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FFq-Jb-s1m"/>
+                                    <action selector="showAttributedActionSheet:" destination="t8O-Hr-J3K" eventType="touchUpInside" id="lnk-LC-kI4"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="DiH-yq-utY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="61P-Ym-Hfo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3r4-Aa-3t0" secondAttribute="trailing" constant="20" id="8Ij-uR-J7G"/>
-                            <constraint firstItem="Dzl-OU-L2l" firstAttribute="top" secondItem="3r4-Aa-3t0" secondAttribute="bottom" constant="20" id="91B-pz-cRy"/>
-                            <constraint firstItem="Dzl-OU-L2l" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="9ge-G3-q80"/>
-                            <constraint firstItem="4eL-eu-gLe" firstAttribute="top" secondItem="Dzl-OU-L2l" secondAttribute="bottom" constant="10" id="DYs-kB-c2p"/>
-                            <constraint firstItem="DiH-yq-utY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Dz9-oY-zJX"/>
-                            <constraint firstItem="3r4-Aa-3t0" firstAttribute="top" secondItem="DiH-yq-utY" secondAttribute="bottom" constant="10" id="LOm-q4-Bzm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DiH-yq-utY" secondAttribute="trailing" constant="20" id="Oa9-UL-ZF6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Dzl-OU-L2l" secondAttribute="trailing" constant="20" id="POG-NA-0jg"/>
-                            <constraint firstItem="4eL-eu-gLe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="ZNT-kh-6qg"/>
-                            <constraint firstItem="3r4-Aa-3t0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="wsG-0U-zL3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4eL-eu-gLe" secondAttribute="trailing" constant="20" id="yPV-eg-Lqc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="chH-Op-xkb" secondAttribute="trailing" constant="20" id="014-Pe-nvt"/>
+                            <constraint firstItem="chH-Op-xkb" firstAttribute="leading" secondItem="HoM-vn-vcl" secondAttribute="leadingMargin" constant="20" id="6OE-5O-pov"/>
+                            <constraint firstItem="Bfw-by-NVY" firstAttribute="top" secondItem="00X-E0-GtO" secondAttribute="bottom" constant="20" id="9W8-I5-EXQ"/>
+                            <constraint firstItem="Bfw-by-NVY" firstAttribute="leading" secondItem="HoM-vn-vcl" secondAttribute="leadingMargin" constant="20" id="I5J-fJ-VAI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bfw-by-NVY" secondAttribute="trailing" constant="20" id="O73-wY-hw6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="00X-E0-GtO" secondAttribute="trailing" constant="20" id="RSW-Rl-SFV"/>
+                            <constraint firstItem="chH-Op-xkb" firstAttribute="top" secondItem="boE-D6-brh" secondAttribute="bottom" constant="50" id="Va8-Qw-wjG"/>
+                            <constraint firstItem="JRj-Yt-sLc" firstAttribute="leading" secondItem="HoM-vn-vcl" secondAttribute="leadingMargin" constant="20" id="bB3-o4-Ngc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JRj-Yt-sLc" secondAttribute="trailing" constant="20" id="caX-Re-5Ch"/>
+                            <constraint firstItem="JRj-Yt-sLc" firstAttribute="top" secondItem="Bfw-by-NVY" secondAttribute="bottom" constant="10" id="dlu-VP-5gj"/>
+                            <constraint firstItem="00X-E0-GtO" firstAttribute="leading" secondItem="HoM-vn-vcl" secondAttribute="leadingMargin" constant="20" id="h7X-oA-LIp"/>
+                            <constraint firstItem="00X-E0-GtO" firstAttribute="top" secondItem="chH-Op-xkb" secondAttribute="bottom" constant="10" id="mhM-NH-B8W"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="8U8-iJ-cM8"/>
-                    <navigationItem key="navigationItem" id="MWs-c7-2UP"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="vX2-Z3-J7a"/>
+                    <navigationItem key="navigationItem" id="SrR-cv-1C3"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Bj-Ko-BVY" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="239" y="259"/>
+            <point key="canvasLocation" x="307" y="931"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7PT-Xq-u6v">
+            <objects>
+                <tabBarController id="ARf-1v-a5W" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Gb7-WS-VXv"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Eyc-ce-iEx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="t8O-Hr-J3K" kind="relationship" relationship="viewControllers" id="41c-dI-qCD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wrP-9f-IhX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="946"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RTY-q4-mRf">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fyb-qS-oqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="7IS-w5-86a" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eLB-lx-6dO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ARf-1v-a5W" kind="relationship" relationship="rootViewController" id="4Ce-Tp-YEY"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-988" y="894"/>
         </scene>
     </scenes>
 </document>

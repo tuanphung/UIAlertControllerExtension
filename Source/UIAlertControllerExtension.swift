@@ -27,6 +27,22 @@ public typealias ActionHandler = (action: UIAlertAction) -> ()
 public typealias AttributedActionTitle = (title: String, style: UIAlertActionStyle)
 
 public extension UIAlertController {
+    
+    // Support Present UIAlertController from anywhere. It will be presented by Top Presented ViewController.
+    public class func present(style: UIAlertControllerStyle = .Alert, title: String?, message: String?, actionTitles: [String]?, handler: ActionHandler? = nil) -> UIAlertController {
+        // Force unwrap rootViewController
+        let rootViewController = UIApplication.sharedApplication().delegate!.window!!.rootViewController!
+        
+        return self.presentFromViewController(rootViewController, style: style, title: title, message: message, actionTitles: actionTitles, handler: handler)
+    }
+    
+    public class func present(style: UIAlertControllerStyle = .Alert, title: String?, message: String?, attributedActionTitles: [AttributedActionTitle]?, handler: ActionHandler? = nil) -> UIAlertController {
+        // Force unwrap rootViewController
+        let rootViewController = UIApplication.sharedApplication().delegate!.window!!.rootViewController!
+        
+        return self.presentFromViewController(rootViewController, style: style, title: title, message: message, attributedActionTitles: attributedActionTitles, handler: handler)
+    }
+    
     // Simple class method to present UIAlertController with Default UIAlertAction
     public class func presentFromViewController(viewController: UIViewController, style: UIAlertControllerStyle = .Alert, title: String?, message: String?, actionTitles: [String]?, handler: ActionHandler? = nil) -> UIAlertController {
         return self.presentFromViewController(viewController, style: style, title: title, message: message, attributedActionTitles: actionTitles?.map({ (title) -> AttributedActionTitle in return (title: title, style: .Default) }), handler: handler)
@@ -37,7 +53,7 @@ public extension UIAlertController {
         // Create an instance of UIALertViewController
         var alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         
-        // Loop all attributedButtonTitles, create an UIAlertAction for each
+        // Loop all attributedActionTitles, create an UIAlertAction for each
         // attributedButtonTitles is array of tuple AttributedActionTitle
         if let _attributedActionTitles = attributedActionTitles {
             for _attributedActionTitle in _attributedActionTitles {
@@ -48,12 +64,13 @@ public extension UIAlertController {
             }
         }
         
-        // It's fixed for some cases viewController is instance of UITabBarController or UINavigationController.
+        // It's fixed for case viewController is not presented viewcontroller
         viewController.topMostViewController?.presentViewController(alertController, animated: true) {}
         return alertController
     }
 }
 
+// MARK:
 public extension UIViewController {
     public func presentAlert(style: UIAlertControllerStyle = .Alert, title: String?, message: String?, actionTitles: [String]?, handler: ActionHandler? = nil) -> UIAlertController {
         return UIAlertController.presentFromViewController(self, style: style, title: title, message: message, actionTitles: actionTitles, handler: handler)
@@ -63,19 +80,36 @@ public extension UIViewController {
         return UIAlertController.presentFromViewController(self, style: style, title: title, message: message, attributedActionTitles: attributedActionTitles, handler: handler)
     }
     
-    internal var topMostViewController: UIViewController? {
+    // Get ViewController in top present level
+    internal var topPresentedViewController: UIViewController? {
         get {
-            if let navigation = self as? UINavigationController {
-                if let visibleViewController = navigation.visibleViewController {
-                    return visibleViewController.topMostViewController
-                }
+            var target: UIViewController? = self
+            while (target?.presentedViewController != nil) {
+                target = target?.presentedViewController
             }
-            if let tabBar = self as? UITabBarController {
-                if let selectedViewController = tabBar.selectedViewController {
-                    return selectedViewController.topMostViewController
-                }
+            return target
+        }
+    }
+    
+    // Get top VisibleViewController from ViewController stack in same present level.
+    // It should be topViewController if self is a UINavigationController instance
+    // It should be selectedViewController if self is a UITabBarContrller instance
+    internal var topVisibleViewController: UIViewController? {
+        get {
+            if let nav = self as? UINavigationController {
+                return nav.topViewController.topVisibleViewController
+            }
+            else if let tabBar = self as? UITabBarController {
+                return tabBar.selectedViewController?.topVisibleViewController
             }
             return self
+        }
+    }
+    
+    // Combine both topPresentedViewController and topVisibleViewController methods, to get top visible viewcontroller in top present level
+    internal var topMostViewController: UIViewController? {
+        get {
+            return self.topPresentedViewController?.topVisibleViewController
         }
     }
 }
