@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiH-yq-utY">
+                                <rect key="frame" x="36" y="70" width="528" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Of5-BZ-9uR"/>
+                                </constraints>
+                                <state key="normal" title="Show Default Alert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showDefaultAlert:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="2yD-ZP-kiW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3r4-Aa-3t0">
+                                <rect key="frame" x="36" y="130" width="528" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hog-CK-KQg"/>
+                                </constraints>
+                                <state key="normal" title="Show Attributed Alert">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showAttributedAlert:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fw0-9M-8nA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzl-OU-L2l">
+                                <rect key="frame" x="36" y="200" width="528" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uDc-IY-oXT"/>
+                                </constraints>
+                                <state key="normal" title="Show Default ActionSheet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showDefaultActionSheet:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="QhT-jJ-vAp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eL-eu-gLe">
+                                <rect key="frame" x="36" y="260" width="528" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9M9-Lg-P06"/>
+                                </constraints>
+                                <state key="normal" title="Show Attributed ActionSheet">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="showAttributedActionSheet:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FFq-Jb-s1m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DiH-yq-utY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="61P-Ym-Hfo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3r4-Aa-3t0" secondAttribute="trailing" constant="20" id="8Ij-uR-J7G"/>
+                            <constraint firstItem="Dzl-OU-L2l" firstAttribute="top" secondItem="3r4-Aa-3t0" secondAttribute="bottom" constant="20" id="91B-pz-cRy"/>
+                            <constraint firstItem="Dzl-OU-L2l" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="9ge-G3-q80"/>
+                            <constraint firstItem="4eL-eu-gLe" firstAttribute="top" secondItem="Dzl-OU-L2l" secondAttribute="bottom" constant="10" id="DYs-kB-c2p"/>
+                            <constraint firstItem="DiH-yq-utY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Dz9-oY-zJX"/>
+                            <constraint firstItem="3r4-Aa-3t0" firstAttribute="top" secondItem="DiH-yq-utY" secondAttribute="bottom" constant="10" id="LOm-q4-Bzm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="DiH-yq-utY" secondAttribute="trailing" constant="20" id="Oa9-UL-ZF6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dzl-OU-L2l" secondAttribute="trailing" constant="20" id="POG-NA-0jg"/>
+                            <constraint firstItem="4eL-eu-gLe" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="ZNT-kh-6qg"/>
+                            <constraint firstItem="3r4-Aa-3t0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="wsG-0U-zL3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4eL-eu-gLe" secondAttribute="trailing" constant="20" id="yPV-eg-Lqc"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="8U8-iJ-cM8"/>
+                    <navigationItem key="navigationItem" id="MWs-c7-2UP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="259"/>
+        </scene>
+    </scenes>
+</document>

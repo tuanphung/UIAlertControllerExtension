@@ -1,0 +1,14 @@
+PODS:
+  - UIAlertControllerExtension (1.0)
+
+DEPENDENCIES:
+  - UIAlertControllerExtension (from `../`)
+
+EXTERNAL SOURCES:
+  UIAlertControllerExtension:
+    :path: ../
+
+SPEC CHECKSUMS:
+  UIAlertControllerExtension: b910a7bb7c35d1f66b8394c3ea9ca313fb793c6c
+
+COCOAPODS: 0.37.2
