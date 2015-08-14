@@ -1,5 +1,7 @@
 #UIAlertControllerExtension
-An extension is written in Swift, allow you present an alert with new UIAlertController from any ViewController or anywhere.
+An extension is written in Swift, 
+
+Allow to present a UIAlertController from any ViewController or anywhere.
 
 Support both Alert & ActionSheet style.
 
