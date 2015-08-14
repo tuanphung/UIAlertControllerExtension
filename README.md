@@ -81,4 +81,4 @@ self.presentAlert(style: .ActionSheet,
 
 ## License
 
-UIAlertController is released under the MIT license. See LICENSE for details.
+UIAlertControllerExtension is released under the MIT license. See LICENSE for details.
