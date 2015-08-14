@@ -1,5 +1,6 @@
 #UIAlertControllerExtension
 An extension is written in Swift. Allow you present an alert with new UIAlertController from any ViewController quickly.
+Support Alert & ActionSheet style.
 
 ## Requirements
 - iOS 8.0+ / Mac OS X 10.9+
@@ -32,3 +33,51 @@ $ pod install
 ## Usage
 ```swift
 ```
+### Presenting a Default Alert
+```swift
+import UIAlertControllerExtension
+
+self.presentAlert(title: "Title", message: "Message", actionTitles: ["OK", "Cancel", "Destroy"]) { (action) -> () in
+   //Handle event callback
+   println(action.title)
+}
+```
+### Presenting a Attributed Alert
+```swift
+import UIAlertControllerExtension
+
+self.presentAlert(title: "title",
+                  message: "message", 
+                  attributedActionTitles: [("OK", .Default), ("Cancel", .Cancel), ("Destroy", .Destructive)])  
+                  { (action) -> () in
+                      //Handle event callback
+                      println(action.title)
+}
+```
+
+### Presenting a Default ActionSheet
+```swift
+import UIAlertControllerExtension
+
+self.presentAlert(style: .ActionSheet, title: "Title", message: "Message", actionTitles: ["OK", "Cancel", "Destroy"]) { (action) -> () in
+   //Handle event callback
+   println(action.title)
+}
+```
+### Presenting a Attributed ActionSheet
+```swift
+import UIAlertControllerExtension
+
+self.presentAlert(style: .ActionSheet,
+                  title: "title",
+                  message: "message", 
+                  attributedActionTitles: [("OK", .Default), ("Cancel", .Cancel), ("Destroy", .Destructive)])  
+                  { (action) -> () in
+                      //Handle event callback
+                      println(action.title)
+}
+```
+
+## License
+
+UIAlertController is released under the MIT license. See LICENSE for details.
