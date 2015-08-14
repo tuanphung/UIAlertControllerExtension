@@ -1,4 +1,4 @@
-#UIAlertController+Extension
+#UIAlertControllerExtension
 An extension is written in Swift. Allow you present an alert with new UIAlertController from any ViewController quickly.
 
 ## Requirements
@@ -20,7 +20,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-pod 'UIAlertController+Extension', '~> 0.1'
+pod 'UIAlertControllerExtension', '~> 1.0'
 ```
 
 Then, run the following command:
