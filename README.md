@@ -1,6 +1,7 @@
 #UIAlertControllerExtension
-An extension is written in Swift. Allow you present an alert with new UIAlertController from any ViewController quickly.
-Support Alert & ActionSheet style.
+An extension is written in Swift, allow you present an alert with new UIAlertController from any ViewController quickly.
+
+Support both Alert & ActionSheet style.
 
 ## Requirements
 - iOS 8.0+ / Mac OS X 10.9+
@@ -42,7 +43,7 @@ self.presentAlert(title: "Title", message: "Message", actionTitles: ["OK", "Canc
    println(action.title)
 }
 ```
-### Presenting a Attributed Alert
+### Presenting an Attributed Alert
 ```swift
 import UIAlertControllerExtension
 
@@ -64,7 +65,7 @@ self.presentAlert(style: .ActionSheet, title: "Title", message: "Message", actio
    println(action.title)
 }
 ```
-### Presenting a Attributed ActionSheet
+### Presenting an Attributed ActionSheet
 ```swift
 import UIAlertControllerExtension
 
