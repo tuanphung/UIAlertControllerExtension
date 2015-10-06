@@ -34,26 +34,26 @@ class ViewController: UIViewController {
     // MARK: Alert
     @IBAction func showDefaultAlert(sender: UIButton) {
         UIAlertController.present(title: "title", message: "message", actionTitles: ["OK", "Cancel", "Destroy"]) { (action) -> () in
-            println(action.title)
+            print(action.title)
         }
     }
     
     @IBAction func showAttributedAlert(sender: UIButton) {
         UIAlertController.present(title: "title", message: "message", attributedActionTitles: [("OK", .Default), ("Cancel", .Cancel), ("Destroy", .Destructive)]) { (action) -> () in
-            println(action.title)
+            print(action.title)
         }
     }
     
     // ActionSheet
     @IBAction func showDefaultActionSheet(sender: UIButton) {
-        UIAlertController.present(style: .ActionSheet, title: "title", message: "message", actionTitles: ["OK", "Cancel", "Destroy"]) { (action) -> () in
-            println(action.title)
+        UIAlertController.present(.ActionSheet, title: "title", message: "message", actionTitles: ["OK", "Cancel", "Destroy"]) { (action) -> () in
+            print(action.title)
         }
     }
     
     @IBAction func showAttributedActionSheet(sender: UIButton) {
-        UIAlertController.present(style: .ActionSheet, title: "title", message: "message", attributedActionTitles: [("OK", .Default), ("Cancel", .Cancel), ("Destroy", .Destructive)]) { (action) -> () in
-            println(action.title)
+        UIAlertController.present(.ActionSheet, title: "title", message: "message", attributedActionTitles: [("OK", .Default), ("Cancel", .Cancel), ("Destroy", .Destructive)]) { (action) -> () in
+            print(action.title)
         }
     }
 }

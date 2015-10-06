@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "80F440272535B18D36DE5509FA26DA48081AAEA7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "80F440272535B18D36DE5509FA26DA48081AAEA7" : 0,
+    "8FA43B53BA70FFC40C5ED7D197800CDC5A38A7A9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6BDB8D89-3411-48F6-8056-5EEFFD3977C8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "80F440272535B18D36DE5509FA26DA48081AAEA7" : "UIAlertControllerExtension",
+    "8FA43B53BA70FFC40C5ED7D197800CDC5A38A7A9" : "UIAlertController-Extension"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Example",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/Example.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tuanphung\/UIAlertControllerExtension.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "80F440272535B18D36DE5509FA26DA48081AAEA7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tuanphung\/UIAlertController-Extension.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8FA43B53BA70FFC40C5ED7D197800CDC5A38A7A9"
+    }
+  ]
+}

@@ -51,7 +51,7 @@ public extension UIAlertController {
     // Generic class method to present UIAlertController
     public class func presentFromViewController(viewController: UIViewController, style: UIAlertControllerStyle = .Alert, title: String?, message: String?, attributedActionTitles: [AttributedActionTitle]?, handler: ActionHandler? = nil) -> UIAlertController {
         // Create an instance of UIALertViewController
-        var alertController = UIAlertController(title: title, message: message, preferredStyle: style)
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: style)
         
         // Loop all attributedActionTitles, create an UIAlertAction for each
         // attributedButtonTitles is array of tuple AttributedActionTitle
@@ -97,7 +97,7 @@ public extension UIViewController {
     internal var topVisibleViewController: UIViewController? {
         get {
             if let nav = self as? UINavigationController {
-                return nav.topViewController.topVisibleViewController
+                return nav.topViewController?.topVisibleViewController
             }
             else if let tabBar = self as? UITabBarController {
                 return tabBar.selectedViewController?.topVisibleViewController
