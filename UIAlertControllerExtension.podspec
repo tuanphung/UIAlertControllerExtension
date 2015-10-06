@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "UIAlertControllerExtension"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "An extension allow you present an alert with new UIAlertController from any ViewController quickly."
 
   s.description  = <<-DESC
