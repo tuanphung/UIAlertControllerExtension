@@ -1,5 +1,7 @@
 #UIAlertControllerExtension
-An extension is written in Swift, allow you present an alert with new UIAlertController from any ViewController quickly.
+An extension is written in Swift, 
+
+Allow to present a UIAlertController from any ViewController or anywhere.
 
 Support both Alert & ActionSheet style.
 
@@ -32,13 +34,12 @@ $ pod install
 ```
 
 ## Usage
-```swift
-```
+
 ### Presenting a Default Alert
 ```swift
 import UIAlertControllerExtension
 
-self.presentAlert(title: "Title", message: "Message", actionTitles: ["OK", "Cancel", "Destroy"]) { (action) -> () in
+UIAlertController.present(title: "Title", message: "Message", actionTitles: ["OK", "Cancel", "Destroy"]) { (action) -> () in
    //Handle event callback
    println(action.title)
 }
@@ -47,7 +48,7 @@ self.presentAlert(title: "Title", message: "Message", actionTitles: ["OK", "Canc
 ```swift
 import UIAlertControllerExtension
 
-self.presentAlert(title: "title",
+UIAlertController.present(title: "title",
                   message: "message", 
                   attributedActionTitles: [("OK", .Default), ("Cancel", .Cancel), ("Destroy", .Destructive)])  
                   { (action) -> () in
@@ -60,7 +61,7 @@ self.presentAlert(title: "title",
 ```swift
 import UIAlertControllerExtension
 
-self.presentAlert(style: .ActionSheet, title: "Title", message: "Message", actionTitles: ["OK", "Cancel", "Destroy"]) { (action) -> () in
+UIAlertController.present(style: .ActionSheet, title: "Title", message: "Message", actionTitles: ["OK", "Cancel", "Destroy"]) { (action) -> () in
    //Handle event callback
    println(action.title)
 }
@@ -69,7 +70,7 @@ self.presentAlert(style: .ActionSheet, title: "Title", message: "Message", actio
 ```swift
 import UIAlertControllerExtension
 
-self.presentAlert(style: .ActionSheet,
+UIAlertController.present(style: .ActionSheet,
                   title: "title",
                   message: "message", 
                   attributedActionTitles: [("OK", .Default), ("Cancel", .Cancel), ("Destroy", .Destructive)])  
