@@ -33,10 +33,13 @@ class ViewController: UIViewController {
 
     // MARK: Alert
     @IBAction func showDefaultAlert(sender: UIButton) {
+//        UIAlertController.present(title: "title") { (action) -> () in
+//        UIAlertController.present(message: "message") { (action) -> () in
         UIAlertController.present(title: "title", message: "message", actionTitles: ["OK", "Cancel", "Destroy"]) { (action) -> () in
             print(action.title)
         }
     }
+    
     
     @IBAction func showAttributedAlert(sender: UIButton) {
         UIAlertController.present(title: "title", message: "message", attributedActionTitles: [("OK", .Default), ("Cancel", .Cancel), ("Destroy", .Destructive)]) { (action) -> () in
