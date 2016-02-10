@@ -29,14 +29,14 @@ public typealias AttributedActionTitle = (title: String, style: UIAlertActionSty
 public extension UIAlertController {
     
     // Support Present UIAlertController from anywhere. It will be presented by Top Presented ViewController.
-    public class func present(style: UIAlertControllerStyle = .Alert, title: String?, message: String?, actionTitles: [String]?, handler: ActionHandler? = nil) -> UIAlertController {
+    public class func present(style: UIAlertControllerStyle = .Alert, title: String? = nil, message: String? = nil, actionTitles: [String]? = ["OK"], handler: ActionHandler? = nil) -> UIAlertController {
         // Force unwrap rootViewController
         let rootViewController = UIApplication.sharedApplication().delegate!.window!!.rootViewController!
         
         return self.presentFromViewController(rootViewController, style: style, title: title, message: message, actionTitles: actionTitles, handler: handler)
     }
     
-    public class func present(style: UIAlertControllerStyle = .Alert, title: String?, message: String?, attributedActionTitles: [AttributedActionTitle]?, handler: ActionHandler? = nil) -> UIAlertController {
+    public class func present(style: UIAlertControllerStyle = .Alert, title: String? = nil, message: String? = nil, attributedActionTitles: [AttributedActionTitle]?, handler: ActionHandler? = nil) -> UIAlertController {
         // Force unwrap rootViewController
         let rootViewController = UIApplication.sharedApplication().delegate!.window!!.rootViewController!
         
@@ -72,11 +72,11 @@ public extension UIAlertController {
 
 // MARK:
 public extension UIViewController {
-    public func presentAlert(style: UIAlertControllerStyle = .Alert, title: String?, message: String?, actionTitles: [String]?, handler: ActionHandler? = nil) -> UIAlertController {
+    public func presentAlert(style: UIAlertControllerStyle = .Alert, title: String? = nil, message: String? = nil, actionTitles: [String]? = ["OK"], handler: ActionHandler? = nil) -> UIAlertController {
         return UIAlertController.presentFromViewController(self, style: style, title: title, message: message, actionTitles: actionTitles, handler: handler)
     }
     
-    public func presentAlert(style: UIAlertControllerStyle = .Alert, title: String?, message: String?, attributedActionTitles: [AttributedActionTitle]?, handler: ActionHandler? = nil) -> UIAlertController {
+    public func presentAlert(style: UIAlertControllerStyle = .Alert, title: String? = nil, message: String? = nil, attributedActionTitles: [AttributedActionTitle]?, handler: ActionHandler? = nil) -> UIAlertController {
         return UIAlertController.presentFromViewController(self, style: style, title: title, message: message, attributedActionTitles: attributedActionTitles, handler: handler)
     }
     
